@@ -248,7 +248,7 @@ class Facebook extends OAuth2Scheme {
     /**
      * Valid state with original state
      */
-    if (state && originalState !== state) {
+    if (state && originalState && originalState !== state) {
       throw CE.OAuthException.invalidState()
     }
 
